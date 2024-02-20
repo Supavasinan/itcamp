@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles/globals.css">
+    <script src="https://kit.fontawesome.com/723d9b901d.js" crossorigin="anonymous"></script>
+    <link href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Password Generator 🔑</h1>
+        <div class="container-password">
+            <span class="password-label" id="password"></span>
+            <div class="container-buttons">
+                <button id="generate"><i class="fa-solid fa-arrows-rotate"></i></button>
+                <button id="copy-button"><i class="fa-solid fa-clipboard"></i></button>
+            </div>
+        </div>
+        <!-- <button id="generate">Generate Password</button> -->
+        <div class="container-options">
+            <h2>Options</h2>
+            <div class="options">
+                <div class="password-slider">
+                    <input type="range" id="length">
+                    <input type="number" id="length-value">
+                </div>
+                <div class="container-checkbox">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="include-uppercase" />
+                        <label for="include-uppercase">
+                            <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                        </label>
+                    </div>
+                    <label for="include-uppercase">Include Uppercase</label>
+                </div>
+                <div class="container-checkbox">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="include-numbers" />
+                        <label for="include-numbers">
+                            <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                        </label>
+                    </div>
+                    <label for="include-numbers">Include Number</label>
+                </div>
+                <div class="container-checkbox">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="include-symbols" />
+                        <label for="include-symbols">
+                            <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                        </label>
+                    </div>
+                    <label for="include-symbols">Include Symbols</label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="scripts/app.js"></script>
+
+</body>
+
+</html>

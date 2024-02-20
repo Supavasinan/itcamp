@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAElBMVEUAAAD8/vz08vT09vT8+vzs7uxH16TeAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAuFJREFUOI0Vk+3NLiEIRG1B8ClAYAsQ2AIEt4D9ePtv5Xp/mZgYJ2fOFJKEfInkVWY2aglmQFkimRTV7MblYyVqD7HXyhKsSuPX12MeDhRHLtGvRG+P+B/S0Vu4OswR9tmvwNPyhdCDbVayJGads/WiUWcjCvCnruTBNHS9gmX2VzVbk7ZvB1gb1hkWFGl+A/n+/FowcO34U/XvKqZ/fHY+6vgRfU92XrOBUbGeeDfQmjWjdrK+frc6FdGReQhfSF5JvR29O2QrfNw1huTwlgsyXLo0u+5So82sgv7tsFZR2nxB6lXiquHrfD8nfYZ9SeT0LiuvSoVrxGY16pCNRZKqvwWsn5OHypPBELzohMCaRaa0ceTHYqe7X/gfJEEtKFbJpWoNqO+aS1cuTykGPpK5Ga48m6L3NefTr013KqYBQu929iP1oQ/7UwSR+i3zqruUmT84qmhzLpxyj7pr9kg7LKvqaXxZmdpn+6o8sHqSqojy02gU3U8q9PnpidiaLks0mbMYz+q2uVXsoBQ8bfURULYxRgZVYCHMv9F4OA7qxT2NPPpvGQ/sTDH2yznKh7E2AcErfcNsaIoN1izzbJiaY63x4QjUFdBSvDCvugPpu5xDny0jzEeuUQbcP1aGT9V90uixngTRLYNEIIZ6yOF1H8tm7rj2JxiefsVy53zGVy3ag5uuPsdufYOzYxLRxngKe7nhx3VAq54pmz/DK9/Q3aDam2Yt3hNXB4HuU87jKNd/CKZn77Qdn5QkXPfqSkhk7hGOXXB+7v09KbBbqdvxGqa0AqfK/atIrL2WXdAgXAJ43Wtwe/aIoacXezeGPMlhDOHDbSfHnaXsL2QzbT82GRwZuezdwcoWzx5pnOnGMUdHuiY7lhdyWzWiHnucLZQxYStMJbtcydHaQ6vtMbe0AcDbxG+QG14AL94xry4297xpy9Cpf1OoxZ740gHDfrK+gtsy0xabwJmfgtCeii79B6aj0SJeLbd7AAAAAElFTkSuQmCC);
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  padding: 2vh 2vh;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 1vh;
+  background-color: #fff;
+  width: 80vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.container-password {
+  position: relative;
+  display: flex;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  height: .5vh;
+  border-radius: 1vh;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1vh;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1vh;
+
+}
+
+
+.container-buttons {
+  position: absolute;
+  height: 80%;
+  right: 0.5vh;
+
+}
+
+#generate {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: none;
+  font-size: 2vh;
+  cursor: pointer;
+color: #b6b6b69f;
+}
+#generate:hover {
+  color: rgba(120, 120, 120, 0.822);
+}
+#copy-button {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: #b6b6b69f;
+  color: #fff;
+  border: none;
+  border-radius: 0.5vh;
+  font-size: 2vh;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#copy-button:hover {
+  background-color: rgba(182, 182, 182, 0.822);
+}
+.password-label {
+  text-align: center;
+  color: rgb(103, 98, 98);
+  font-size: 2.5vh;
+  width: 100%;
+  outline: 0.2vh solid rgba(168, 166, 166, 0.556);
+  border-radius: 1vh;
+  padding: 0.3vh 1vh;
+  text-wrap: nowrap;
+  overflow-x: scroll;
+  transition: 0.5s;
+}
+.container-options {
+  margin-top: 1vh;
+}
+.options {
+  margin-top: 1vh;
+  display: flex;
+  gap: 1vh;
+}
+#length-value {
+  text-align: center;
+  width: 4vh;
+  padding: 0.5vh;
+}
+
+#length-value::-webkit-outer-spin-button,
+#length-value::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  
+  margin: 0;
+}
+
+#length-value {
+  -moz-appearance:textfield;
+}
+
+.container-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+}
+
+
+.container-checkbox > label {
+  cursor: pointer;
+  user-select: none;
+}
+
+.password-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+}
+
+
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-wrapper input:checked + label svg path {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper input:focus + label {
+  transform: scale(1.03);
+}
+
+.checkbox-wrapper input + label {
+  --size: 2.5vh;
+  display: block;
+  border: 2px solid #333;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkbox-wrapper input + label:active {
+  transform: scale(1.05);
+  border-radius: 12px;
+}
+
+.checkbox-wrapper input + label svg {
+  pointer-events: none;
+  padding: 5%;
+}
+
+.checkbox-wrapper input + label svg path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 101;
+  transition: all 250ms cubic-bezier(1, 0, 0.37, 0.91);
+}
